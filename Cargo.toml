@@ -1,0 +1,19 @@
+[package]
+name = "vinparser"
+version = "1.0.0"
+description = "Vehicle Identification Number (VIN) parser and validator"
+authors = ["XXIV"]
+homepage = "https://github.com/thechampagne/libvinparser"
+repository = "https://github.com/thechampagne/libvinparser"
+readme = "README.md"
+license = "MIT"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "vinparser"
+crate-type =["cdylib","staticlib"]
+
+[dependencies]
+vin_parser = "1.0.0"
