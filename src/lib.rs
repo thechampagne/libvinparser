@@ -158,3 +158,13 @@ unsafe extern "C" fn vinparser_verify_checksum(vin: *const c_char, error_code: *
 	}
     }
 }
+
+#[no_mangle]
+unsafe extern "C" fn vinparser_vin_clean(vinparser_vin: *mut vinparser_vin_t) {
+    if !vinparser_vin.is_null() {
+	let _ = CString::from_raw((*vinparser_vin).vin);
+	let _ = CString::from_raw((*vinparser_vin).country);
+	let _ = CString::from_raw((*vinparser_vin).manufacturer);
+	let _ = CString::from_raw((*vinparser_vin).region);
+    }
+}

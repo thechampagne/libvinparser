@@ -47,6 +47,8 @@ int vinparser_check_validity(const char* vin, vinparser_error_t* error_code);
 int vinparser_get_info(const char* vin, vinparser_vin_t* vinparser_vin, vinparser_error_t* error_code);
 
 int vinparser_verify_checksum(const char* vin, vinparser_error_t* error_code);
+
+void vinparser_vin_clean(vinparser_vin_t* vinparser_vin);
 ```
 
 ### References

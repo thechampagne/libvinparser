@@ -52,6 +52,8 @@ extern int vinparser_get_info(const char* vin, vinparser_vin_t* vinparser_vin, v
 
 extern int vinparser_verify_checksum(const char* vin, vinparser_error_t* error_code);
 
+extern void vinparser_vin_clean(vinparser_vin_t* vinparser_vin);
+
 #ifdef __cplusplus
 }
 #endif
